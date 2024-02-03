@@ -7,7 +7,7 @@ var divUsuarios = document.querySelector('#usuarios');
 
 //FAKE API 1
 
-//https://jsonplaceholder.typicode.com/users  
+//https://jsonplaceholder.typicode.com/users
 
 //PETICION ASINCRONA
 
@@ -37,7 +37,7 @@ fetch('https://reqres.in/api/users')
                 //creamos el elemento para mostrar la informacion
                 let element = document.createElement('h3')
 
-                element.innerHTML = i + " - " + user.first_name + " " + user.last_name  
+                element.innerHTML = i + " - " + user.first_name + " " + user.last_name
                 divUsuarios.appendChild(element)
 
                 document.querySelector('.cargando').style.display='none'
@@ -45,3 +45,42 @@ fetch('https://reqres.in/api/users')
 
 
         })
+
+
+//-------------------------------------ENCADENAR PROMESAS ---------------------------------------//
+
+// console.log("Peticiones AJAX")
+
+// var usuarios = [];
+// var divUsuarios = document.getElementById("#usuarios");
+
+// realizarPeticionTodosUsuarios()
+//         .then(data => data.json())  // obtiene los datos a traves de una funcion 
+//         .then (users => {
+//             pintarUsuario(users.data)
+//         })
+
+// function realizarPeticionTodosUsuarios(){
+    
+//     //realizar la peticion
+//     return fetch('https://reqres.in/api/users')
+// }
+
+// function pintarUsuario(usuarios){
+    
+//     usuarios.map(function(user,i){
+
+//         //creamos el elemento para mostrar la informacion
+//         let nombre = document.createElement('h3');
+//         nombre.innerHTML = i + " - " + user.first_name + " " + user.last_name;
+
+//         divUsuarios.appendChild(nombre)
+        
+//         document.querySelector('.cargando').style.display='none'
+    
+//     })
+
+
+
+
+// }
