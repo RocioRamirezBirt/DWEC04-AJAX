@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+body {
+    background-color: #2C2E31;
+}
+
+h1{
+    color: aliceblue;
+    font-family: 'Barlow', sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#user-info {
+    display: flex;
+    flex-direction:column;
+    background-color: #F9F9F9;
+    margin-bottom: 3rem;
+}
+
+#user-image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin: 0 auto;
+    border-bottom: 5rem;
+    padding: 20px;
+}
+
+.title {
+    font-size: 2rem;
+    font-family: 'Barlow', sans-serif;
+    color:darkolivegreen;
+    display: inline-block;
+    margin: 0.5rem
+}
+
+.datos {
+    margin-left: 1.7rem;
+    text-shadow: #2C2E31;
+    font-size: 1.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: darkmagenta;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+

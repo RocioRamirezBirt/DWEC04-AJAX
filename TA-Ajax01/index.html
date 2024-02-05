@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Pagina que muestra informacion de usuarios</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1>INFORMACION DEL USUARIO</h1>
+
+       <div id="user-info">
+            <img id="user-image" src="" alt="imagen del usuario">
+            <div class="title">Nombre</div>
+            <div class="datos" id="name-user"></div>
+            <div class="title">Edad</div>
+            <div id="edad-user" class="datos"></div>
+            <div class="title">Direccion</div>
+            <div id="address-user" class="datos"></div>
+            <div class="title">Pais</div>
+            <div id="state-user" class="datos"></div>
+       </div>
+
+       <span id="error"></span>
+
+        <button id="btn-user" onclick="generateUser()">Generar usuario</button>
+
+        <script type="text/javascript" src="js/ajax.js"></script>
+    </body>
+</html>
