@@ -17,6 +17,8 @@ h1{
     flex-direction:column;
     background-color: #F9F9F9;
     margin-bottom: 3rem;
+    width: 70%;
+    margin: 0 auto;
 }
 
 #user-image {
