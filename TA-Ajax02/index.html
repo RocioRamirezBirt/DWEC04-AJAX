@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Pagina de contactos usando JQuery</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <h1>INFORMACION DEL USUARIO</h1>
+
+
+        <div id="user-info">
+            <img id="user-img" src="" alt="imagen del usuario">
+            <div class="title">Nombre</div>
+            <div id="name-user" class="datos"></div>
+            <div class="title">Edad</div>
+            <div id="edad-user" class="datos"></div>
+            <div class="title">Direccion</div>
+            <div id="address-user" class="datos"></div>
+            <div class="title">Pais</div>
+            <div id="state-user" class="datos"></div>
+
+            <button id="btn-user" onclick="window.location.reload()">Siguiente</button>
+        </div>
+
+        <span id="error"></span>
+
+        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script  type="text/javascript" src="js/ajax.js"></script>
+    </body>
+</html>
