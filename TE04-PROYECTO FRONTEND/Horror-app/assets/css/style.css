@@ -1,0 +1,357 @@
+/*
+* === MAIN ===
+*/
+
+:root{
+    
+    /*
+    *   Colores
+    */
+
+    --bkg: hsla(220, 17%, 5%, 1);
+    --txt-bkg: hsla(220, 100%, 94%, 4);
+    --banner-bkg: hsla(250, 2%, 30%, 2);
+    --white: hsla(0,0%,100%,1);
+    --white4:hsla(0,0%,100%,0.4);
+    --grey1: hsla(250, 100%,95%,1);
+    --grey2: hsla(250, 1%, 40%,1);
+    --text-color: hsla(250, 2%, 59%, 1);
+
+    /* 
+    
+    --primary: hsla(349, 100%, 43%, 1);
+    --primary-variant: hsla(349, 69%, 51%, 1);
+    --rating-color: hsla(44, 100%, 49%, 1);
+    --surface: hsla(250, 13%, 11%, 1);
+    --white: hsla(0, 0%, 100%, 1); */
+
+/*
+* === GRADIANTES ===
+*/
+
+    --gradient-banner: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,255,255,1) 100%);
+    --gradient-btn: linear-gradient(90deg, rgba(225,105,68,1) 0%, rgba(0,0,0,1) 100%);
+
+
+/*
+* === FUENTES Y TAMAÑOS ===
+*/
+
+    --ff-title: 'Barlow Condensed', sans-serif;
+    --ff-txt: 'Open Sans', sans-serif;
+    --ff-menu:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    --fs-titulo-lg: 2.6rem;
+    --fs-titulo: 2rem;
+    --fs-body: 1.5rem;
+    --fs-menu: 1.2rem;
+    --weight-bold: 700;
+    --weight:400
+
+/*
+* === SOMBRAS ===
+*/
+
+    --s1: 0 1px 4px hsla(0, 0%, 0%, 0.75);
+    --s2: 0 2px 4px hsla(350, 100%, 43%, 0.3);
+
+/*
+* === BORDER RADIUS ===
+*/
+
+    --r4: 4px;
+    --r8: 8px;
+    --r16: 16px;
+    --r24: 24px;
+    --r36: 36px;
+
+}
+
+/*
+* === RESET ===
+*/
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li { list-style: none;}
+
+a,
+img,
+span,
+iframe,
+button { display: block;}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+img{ height: auto;}
+
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    text-align: left;
+    cursor: pointer;
+}
+
+html {
+    font-family: var(--ff-txt);
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bkg);
+    color: var(--txt-bkg);
+    font-size: var(--fs-body);
+    line-height: 1.5;
+    height: 300vh;
+    width: 200vh;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--banner-bkg);
+    border-radius: var(--r8);
+}
+
+.search-wrapper::before{
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 3px solid var(--white);
+    border-radius: var(--r24);
+    border-inline-end-color: transparent;
+    animation: loading 800ms linear infinite;
+    display: none;
+}
+
+.search-wrapper.active::before{
+    display: block;
+}
+
+@keyframes loading {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(1turn);}
+}
+
+.title {
+    font-family: var(--ff-menu);
+    font-size: var(--fs-titulo);
+    font-weight: var(--weight);
+    letter-spacing: 0.6;
+}
+
+
+
+/*
+* ===========  HEADER ========================
+*/
+
+.container-header {
+    position: relative;
+    padding-block: 20px;
+    padding-inline: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    gap: 8px;
+}
+
+.container-header .logo {
+    margin-inline-end: auto;
+}
+
+.buscar-btn,
+.menu-btn {
+    padding: 10px;
+}
+
+.buscar-btn{
+    background-color: var(--banner-bkg);
+    border-radius: var(--r8);
+    opacity: 0.4;
+    transition: 280ms ease;
+}
+
+.buscar-btn:is(:hover, :focus-visible){opacity: 1.2;}
+
+.menu-btn.active .menu,
+.menu-btn .close {
+    display: none;
+}
+
+.menu-btn .menu,
+.menu-btn.active .close {
+    display: block;
+}
+
+.container-search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bkg);
+    padding: 24px 16px;
+    align-items: center;
+    gap: 8px;
+    z-index: 1;
+    display: none;
+}
+
+.container-search.active{
+    display: flex;
+    
+}
+
+.search-wrapper {
+    position: relative;
+    flex-grow: 1;
+}
+
+.input-field {
+    background-color: var(--banner-bkg);
+    height: 40px;
+    line-height: 40px;
+    padding-inline: 40px 16px;
+    outline: none;
+    border-radius: var(--r8);
+    transition: 280ms ease;
+}
+
+.input-field::placeholder {
+    color: var(--grey2);
+}
+
+.input-field:hover {
+    box-shadow: 0 0 0 2px var(--grey1);
+}
+
+.input-field:focus {
+    box-shadow: 0 0 0 2px var(--grey2);
+    padding-inline-start: 16px;
+}
+
+.search-wrapper .lupa-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    opacity: 0.5;
+    transition: 290ms ease;
+}
+
+.search-wrapper:focus-within .lupa-icon{
+    display: none;
+}
+
+/*
+* ===========  SIDEBAR ========================
+*/
+
+.sidebar{
+    position: absolute;
+    background-color: var(--bkg);
+    top: 150px;
+    bottom: 0;
+    left: -340px;
+    max-width: 340px;
+    width: 100%;
+    border-block-start: 1px solid var(--banner-bkg);
+    overflow-y: overlay;
+    z-index: 4;
+    visibility: hidden;
+    transition: var(600ms ease);
+
+}
+
+.sidebar.active{
+    transform: translateX(340px);
+    visibility: visible;
+}
+
+.sidebar-dentro{
+    display: grid;
+    gap: 20px;
+    padding-block: 40px;
+
+}
+
+.lista,
+.sidebar-footer{
+    padding-inline: 36px;
+}
+
+.lista{
+    display: grid;
+    gap: 8px;
+    margin-block-end: 8px;
+}
+
+.sidebar-link{
+    color: var(--text-color);
+    font-family: var(--ff-txt);
+    font-size: var(--fs-menu);
+    text-transform: capitalize;
+    transition: 250ms ease;
+}
+
+.sidebar-link:is(:hover,:focus-visible){
+    color: var(--grey2);
+}
+
+.sidebar-footer{
+    border-block-start: 1px solid var(--banner-bkg);
+    padding-block-start: 26px;
+    margin-block-start: 10px;
+}
+
+.copyright{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--fs-menu);
+    color: var(--grey2);
+    margin-block-end: 20px;
+}
+
+.copyright a {
+    display: inline-block;
+}
+
+/* .overlay{
+    position: fixed;
+    top: 96px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--bkg);
+    opacity: 0;
+    pointer-events: none;
+    transition: 250ms ease;
+    z-index: 3;
+}
+
+.overlay.active {
+    opacity: 0.5;
+    pointer-events: all;
+} */
+
