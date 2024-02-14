@@ -1,332 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HORRORVILLE - MOVIES & SERIES</title>
-    <!-----------FAVICON---------------->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HORRORVILLE - MOVIES & SERIES</title>
 
-    <!-----------GOOGLE FONTS---------------->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Open+Sans&display=swap" rel="stylesheet"> 
+   <!-----------FAVICON---------------->
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">    
+
+   <!-----------GOOGLE FONTS---------------->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Open+Sans&display=swap" rel="stylesheet"> 
 
 
-    <!----------- CSS LINKS---------------->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
+   <!----------- CSS LINKS---------------->
+   <link rel="stylesheet" href="assets/css/style.css">
 
+   <!----------- SCRIPTS---------------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/index.js"></script>
 </head>
 <body>
-    
-<!-------------------HEADER------------------------>
+
+  <!-------------------HEADER------------------------>
 <header class="container-header">
 
-    <a href="./index.html" class="logo">
-        <img src="assets/img/horrorville-logo.png" alt="logo" width="200" height="50">
-    </a>
+  <a href="./index.html" class="logo">
+      <img src="assets/img/horrorville-logo.png" alt="logo" width="200" height="50">
+  </a>
 
-    <div class="container-search" container-search>
-        <div class="search-wrapper" search-wrapper>
-            <input type="text" name="search" aria-label="buscar-pelis"    placeholder="Buscar..." class="input-field" autocomplete="off" input-field>
+  <div class="container-search" container-search>
+      <div class="search-wrapper" search-wrapper>
+          <input type="text" name="search" aria-label="buscar-pelis"    placeholder="Buscar..." class="input-field" autocomplete="off" input-field>
 
-            <img src="assets/img/search.png" width="20" height="20" alt="" class="lupa-icon">
-        </div>
+          <img src="assets/img/search.png" width="20" height="20" alt="" class="lupa-icon">
+      </div>
 
-        <button class="buscar-btn" search-toggler>
-            <img src="assets/img/close.png" width="20" height="20" alt="cerrar-buscar">
-        </button>
-    </div>
+      <button class="buscar-btn" search-toggler>
+          <img src="assets/img/close.png" width="20" height="20" alt="cerrar-buscar">
+      </button>
+  </div>
 
-    <button class="buscar-btn" search-toggler menu-close>
-        <img src="assets/img/search.png" width="20" height="20" alt="abrir-buscar">
-    </button>
+  <button class="buscar-btn" search-toggler menu-close>
+      <img src="assets/img/search.png" width="20" height="20" alt="abrir-buscar">
+  </button>
 
-    <button class="menu-btn" menu-btn menu-toggler>
-        <img src="assets/img/menu.png" width="20" height="20" alt="abrir-menu"  class="menu">
-        <img src="assets/img/menu-close.png" width="20" height="20" alt="cerrar-menu" class="close">
-    </button>
-
-
-
-
+  <button class="menu-btn" menu-btn menu-toggler>
+      <img src="assets/img/menu.png" width="20" height="20" alt="abrir-menu"  class="menu">
+      <img src="assets/img/menu-close.png" width="20" height="20" alt="cerrar-menu" class="close">
+  </button>
 </header>
-
-
-
-<!-------------------SIDEBAR------------------------>
-
-<nav class="sidebar" sidebar>
-    <div class="sidebar-dentro">
-        <div class="lista">
-            <p class="title">Estilos</p>
-            
-            <a href="lista.html" menu-close class="sidebar-link">Peliculas</a>
-
-            <a href="lista.html" menu-close class="sidebar-link">series</a>
-            
-            <a href="lista.html" menu-close class="sidebar-link">anime y animacion</a>
-        </div>
-
-        <div class="sidebar-footer">
-            <p class="copyright">
-                Copyright 2024 <a href="#">Velvet &copy</a>
-            </p>
-
-            <p class="tmdb">Support By: 
-                <img src="assets/img/tmdb-logo.png" width="80" height="20" alt="tmdb logo">
-            </p>
-        </div>
-    </div>
-</nav>
-<!-- <div class="overlay" overlay menu-toggler></div> -->
-
-<article class="container" page-content>
-
-   <!---------------------BANNER--------------------------------> 
-    <section class="banner" aria-label="trending">
-
-        <div class="banner-slider">
-
-            <div class="banner-item active" slider-item>
-                <img src="assets/img/slider-banner.jpg" alt="Hereditary" class="img-cover" loading="eager">
-
-                <div class="banner-content">
-
-                    <h2 class="heading">
-                        Hereditary
-                    </h2>
-
-                    <div class="meta-list">
-                        <div class="meta-item">2018</div>
-
-                        <div class="meta-item card-badge">7.3</div>
-                    </div>
-
-                    <p class="genre">Terror, Misterio,Suspense</p>
-
-                    <p class="banner-text">
-                        Cosas extrañas comienzan a suceder en casa de los Graham tras la muerte de la abuela y matriarca, que deja en herencia su casa a su hija Annie. Annie Graham, una galerista casada y con dos hijos, no tuvo una infancia demasiado feliz junto a su madre, y cree que la muerte de ésta puede hacer que pase página. Pero todo se complica cuando su hija menor comienza a ver figuras fantasmales, que también empiezan a aparecer ante su hermano.
-                    </p>
-
-                    <a href="detalles.html" class="btn">
-                        <img src="assets/img/play_circle.png" alt="">
-
-                        <span class="span">Mirar Ahora</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="banner-item" slider-item>
-                <img src="assets/img/slider-banner.jpg" alt="Hereditary" class="img-cover" loading="eager">
-
-                <div class="banner-content">
-
-                    <h2 class="heading">
-                        Hereditary
-                    </h2>
-
-                    <div class="meta-list">
-                        <div class="meta-item">2018</div>
-
-                        <div class="meta-item card-badge">7.3</div>
-                    </div>
-
-                    <p class="genre">Terror, Misterio,Suspense</p>
-
-                    <p class="banner-text">
-                        Cosas extrañas comienzan a suceder en casa de los Graham tras la muerte de la abuela y matriarca, que deja en herencia su casa a su hija Annie. Annie Graham, una galerista casada y con dos hijos, no tuvo una infancia demasiado feliz junto a su madre, y cree que la muerte de ésta puede hacer que pase página. Pero todo se complica cuando su hija menor comienza a ver figuras fantasmales, que también empiezan a aparecer ante su hermano.
-                    </p>
-
-                    <a href="detalles.html" class="btn">
-                        <img src="assets/img/play_circle.png" alt="">
-
-                        <span class="span">Mirar Ahora</span>
-                    </a>
-                </div>
-            </div>
-            
-        </div>
-
-        <!-- <div class="slider-control">
-            <div class="control-inner">
-
-                <button class="poster-box .slider-item active">
-                    <img src="assets/img/slider-control.jpg" alt="Hereditary" loading="lazy" draggable="false" class="img-cover">
-                </button>
-                <button class="poster-box .slider-item ">
-                    <img src="assets/img/slider-control.jpg" alt="Hereditary" loading="lazy" draggable="false" class="img-cover">
-                </button>
-                <button class="poster-box .slider-item ">
-                    <img src="assets/img/slider-control.jpg" alt="Hereditary" loading="lazy" draggable="false" class="img-cover">
-                </button>
-                <button class="poster-box .slider-item ">
-                    <img src="assets/img/slider-control.jpg" alt="Hereditary" loading="lazy" draggable="false" class="img-cover">
-                </button>
-                <button class="poster-box .slider-item ">
-                    <img src="assets/img/slider-control.jpg" alt="Hereditary" loading="lazy" draggable="false" class="img-cover">
-                </button>
-
-                <button class="poster-box .slider-item ">
-                    <img src="assets/img/slider-control.jpg" alt="Hereditary" loading="lazy" draggable="false" class="img-cover">
-                </button>
-
-                <button class="poster-box .slider-item ">
-                    <img src="assets/img/slider-control.jpg" alt="Hereditary" loading="lazy" draggable="false" class="img-cover">
-                </button>
-
-                <button class="poster-box .slider-item ">
-                    <img src="assets/img/slider-control.jpg" alt="Hereditary" loading="lazy" draggable="false" class="img-cover">
-                </button>
-
-                <button class="poster-box .slider-item ">
-                    <img src="assets/img/slider-control.jpg" alt="Hereditary" loading="lazy" draggable="false" class="img-cover">
-                </button>
-
-                
-            </div>
-        </div> -->
-
-    </section>
-
-    <section class="movie-list" aria-label="Novedades">
-
-        <div class="title-wrapper">
-            <h3 class="title-large">Novedades</h3>
-        </div>
-
-        <div class="slider-list">
-            <div class="slider-inner">
-
-                <div class="movie-card">
-                    <figure class="poster-box card-banner">
-                        <img src="assets/img/slider-control.jpg" alt="Hereditary" class="img-cover">
-                    </figure>
-
-                    <h4 class="title">Hereditary</h4>
-
-                    <div class="meta-list">
-                        <div class="meta-item">
-                            <img src="assets/img/star.png"  width="20" height="20" alt="rating" loading="lazy">
-
-                            <span class="span">7.3</span>
-                        </div>
-
-                        <div class="card-badge">2018</div>
-                    </div>
-
-                    <a href="detalles.html" class="card-btn" title="Hereditary"></a>
-
-                </div>
-
-                <div class="movie-card">
-                    <figure class="poster-box card-banner">
-                        <img src="assets/img/slider-control.jpg" alt="Hereditary" class="img-cover">
-                    </figure>
-
-                    <h4 class="title">Hereditary</h4>
-
-                    <div class="meta-list">
-                        <div class="meta-item">
-                            <img src="assets/img/star.png"  width="20" height="20" alt="rating" loading="lazy">
-
-                            <span class="span">7.3</span>
-                        </div>
-
-                        <div class="card-badge">2018</div>
-                    </div>
-
-                    <a href="detalles.html" class="card-btn" title="Hereditary"></a>
-
-                </div>
-
-                <div class="movie-card">
-                    <figure class="poster-box card-banner">
-                        <img src="assets/img/slider-control.jpg" alt="Hereditary" class="img-cover">
-                    </figure>
-
-                    <h4 class="title">Hereditary</h4>
-
-                    <div class="meta-list">
-                        <div class="meta-item">
-                            <img src="assets/img/star.png"  width="20" height="20" alt="rating" loading="lazy">
-
-                            <span class="span">7.3</span>
-                        </div>
-
-                        <div class="card-badge">2018</div>
-                    </div>
-
-                    <a href="detalles.html" class="card-btn" title="Hereditary"></a>
-
-                </div>
-
-                <div class="movie-card">
-                    <figure class="poster-box card-banner">
-                        <img src="assets/img/slider-control.jpg" alt="Hereditary" class="img-cover">
-                    </figure>
-
-                    <h4 class="title">Hereditary</h4>
-
-                    <div class="meta-list">
-                        <div class="meta-item">
-                            <img src="assets/img/star.png"  width="20" height="20" alt="rating" loading="lazy">
-
-                            <span class="span">7.3</span>
-                        </div>
-
-                        <div class="card-badge">2018</div>
-                    </div>
-
-                    <a href="detalles.html" class="card-btn" title="Hereditary"></a>
-
-                </div>
-                
-                <div class="movie-card">
-                    <figure class="poster-box card-banner">
-                        <img src="assets/img/slider-control.jpg" alt="Hereditary" class="img-cover">
-                    </figure>
-
-                    <h4 class="title">Hereditary</h4>
-
-                    <div class="meta-list">
-                        <div class="meta-item">
-                            <img src="assets/img/star.png"  width="20" height="20" alt="rating" loading="lazy">
-
-                            <span class="span">7.3</span>
-                        </div>
-
-                        <div class="card-badge">2018</div>
-                    </div>
-
-                    <a href="detalles.html" class="card-btn" title="Hereditary"></a>
-
-                </div>
-                
-
-
-            </div>
-        </div>
-
-
-    </section>
-
-
-
-
-
-</article>
-
-
-
-
-
-
-
-    <!-----------------------LLAMADA A SRIPTS--------------------->
-
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
+  
+  <main>
+        <!-------------------sidebar------------------------>
+        <nav class="sidebar" sidebar></nav>
+        <div class="overlay" overlay menu-toggler></div>
+        
+        <article class="container" contenido></article>
+  </main>
 </body>
 </html>

@@ -5,10 +5,10 @@
 * ===========  FUNCTIONES ========================
 */
 
-// const eventosEnElementos = function(elements, eventType, callback) {
-//     for(const elem of elements) 
-//     elem.addEventListener(eventType,callback);
-// }
+const addEventOnElements = function(elements, eventType, callback) {
+     for(const elem of elements) 
+     elem.addEventListener(eventType,callback);
+}
 
 
 /*
