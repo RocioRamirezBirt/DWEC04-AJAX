@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HORRORVILLE - MOVIES & SERIES</title>
+
+   <!-----------FAVICON---------------->
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">    
+
+   <!-----------GOOGLE FONTS---------------->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&family=Open+Sans&display=swap" rel="stylesheet"> 
+
+
+   <!----------- CSS LINKS---------------->
+   <link rel="stylesheet" href="assets/css/style.css">
+
+   <!----------- SCRIPTS---------------->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/index.js"></script>
+</head>
+<body>
+
+  <!-------------------HEADER------------------------>
+<header class="container-header">
+
+  <a href="./index.html" class="logo">
+      <img src="assets/img/horrorville-logo.png" alt="logo" width="200" height="50">
+  </a>
+
+  <div class="container-search" container-search>
+      <div class="search-wrapper" search-wrapper>
+          <input type="text" name="search" aria-label="buscar-pelis"    placeholder="Buscar..." class="input-field" autocomplete="off" input-field>
+
+          <img src="assets/img/search.png" width="20" height="20" alt="" class="lupa-icon">
+      </div>
+
+      <button class="buscar-btn" search-toggler>
+          <img src="assets/img/close.png" width="20" height="20" alt="cerrar-buscar">
+      </button>
+  </div>
+
+  <button class="buscar-btn" search-toggler menu-close>
+      <img src="assets/img/search.png" width="20" height="20" alt="abrir-buscar">
+  </button>
+
+  <button class="menu-btn" menu-btn menu-toggler>
+      <img src="assets/img/menu.png" width="20" height="20" alt="abrir-menu"  class="menu">
+      <img src="assets/img/menu-close.png" width="20" height="20" alt="cerrar-menu" class="close">
+  </button>
+</header>
+  
+  <main>
+        <!-------------------sidebar------------------------>
+        <nav class="sidebar" sidebar></nav>
+        <div class="overlay" overlay menu-toggler></div>
+        
+        <article class="container" contenido>
+
+          <!-- Cuadrícula de pósters de películas de terror -->
+          
+
+
+          <section class="movie-list genre-list">
+            <div class="title-wrapper">
+                <h1 class="heading">Peliculas de Terror</h1>
+            </div>
+    
+            <div class="grid-list">
+        
+                    <div class="movie-card">
+                        <figure class="poster-box card-banner">
+                          <div id="movie-grid" class="movie-grid img-cover"></div>
+                        </figure>
+    
+                        <h4 class="title">Hereditary</h4>
+    
+                        <div class="meta-list">
+                            <div class="meta-item">
+                                <img src="assets/img/star.png"  width="20" height="20" alt="rating" loading="eager">
+    
+                                <span class="span">7.3</span>
+                            </div>
+    
+                            <div class="card-badge">2018</div>
+                        </div>
+    
+                        <a href="detalles.html" class="card-btn" title="Hereditary"></a>
+    
+                    </div>
+    
+                    <div class="movie-card">
+                        <figure class="poster-box card-banner">
+                            <img src="assets/img/slider-control.jpg" alt="Hereditary" class="img-cover">
+                        </figure>
+    
+                        <h4 class="title">Hereditary</h4>
+    
+                        <div class="meta-list">
+                            <div class="meta-item">
+                                <img src="assets/img/star.png"  width="20" height="20" alt="rating" loading="lazy">
+    
+                                <span class="span">7.3</span>
+                            </div>
+    
+                            <div class="card-badge">2018</div>
+                        </div>
+    
+                        <a href="detalles.html" class="card-btn" title="Hereditary"></a>
+    
+                    </div>
+    
+                    <div class="movie-card">
+                        <figure class="poster-box card-banner">
+                            <img src="assets/img/slider-control.jpg" alt="Hereditary" class="img-cover">
+                        </figure>
+    
+                        <h4 class="title">Hereditary</h4>
+    
+                        <div class="meta-list">
+                            <div class="meta-item">
+                                <img src="assets/img/star.png"  width="20" height="20" alt="rating" loading="lazy">
+    
+                                <span class="span">7.3</span>
+                            </div>
+    
+                            <div class="card-badge">2018</div>
+                        </div>
+    
+                        <a href="detalles.html" class="card-btn" title="Hereditary"></a>
+    
+                    </div>
+    
+                    <div class="movie-card">
+                        <figure class="poster-box card-banner">
+                            <img src="assets/img/slider-control.jpg" alt="Hereditary" class="img-cover">
+                        </figure>
+    
+                        <h4 class="title">Hereditary</h4>
+    
+                        <div class="meta-list">
+                            <div class="meta-item">
+                                <img src="assets/img/star.png"  width="20" height="20" alt="rating" loading="lazy">
+    
+                                <span class="span">7.3</span>
+                            </div>
+    
+                            <div class="card-badge">2018</div>
+                        </div>
+    
+                        <a href="detalles.html" class="card-btn" title="Hereditary"></a>
+    
+                    </div>
+                    
+                    <div class="movie-card">
+                        <figure class="poster-box card-banner">
+                            <img src="assets/img/slider-control.jpg" alt="Hereditary" class="img-cover">
+                        </figure>
+    
+                        <h4 class="title">Hereditary</h4>
+    
+                        <div class="meta-list">
+                            <div class="meta-item">
+                                <img src="assets/img/star.png"  width="20" height="20" alt="rating" loading="lazy">
+    
+                                <span class="span">7.3</span>
+                            </div>
+    
+                            <div class="card-badge">2018</div>
+                        </div>
+    
+                        <a href="detalles.html" class="card-btn" title="Hereditary"></a>
+    
+                    </div>
+    
+                    <div class="movie-card">
+                        <figure class="poster-box card-banner">
+                            <img src="assets/img/slider-control.jpg" alt="Hereditary" class="img-cover">
+                        </figure>
+    
+                        <h4 class="title">Hereditary</h4>
+    
+                        <div class="meta-list">
+                            <div class="meta-item">
+                                <img src="assets/img/star.png"  width="20" height="20" alt="rating" loading="lazy">
+    
+                                <span class="span">7.3</span>
+                            </div>
+    
+                            <div class="card-badge">2018</div>
+                        </div>
+    
+                        <a href="detalles.html" class="card-btn" title="Hereditary"></a>
+    
+                    </div>
+                
+            </div>
+    
+            <button class="mas loading">Ver Mas</button>
+    
+        </section>
+
+        </article>
+
+
+      
+
+
+
+  </main>
+</body>
+</html>
