@@ -719,7 +719,6 @@ body {
 */
 
 .backdrop-image {
-    background-image: url('../img/slider-banner.jpg');
     position: relative;
     top: 0;
     left: 0;
