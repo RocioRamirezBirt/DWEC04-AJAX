@@ -13,10 +13,7 @@ const addEventOnElements = function(elements, eventType, callback) {
 
 /*
 * ===========  MAIN ========================
-*/
-
-
-$(document).ready(function(){
+*
 
     /*
 * ===========  EVENTOS EN BUSCAR SMALL==========
@@ -32,6 +29,9 @@ $(document).ready(function(){
     })
 
 
+    const getMovieDetail = function (movieId) {
+        window.localStorage.setItem("movieId", String(movieId));
+      };
 
 
 
@@ -40,5 +40,5 @@ $(document).ready(function(){
 
 
     
-})
+
 

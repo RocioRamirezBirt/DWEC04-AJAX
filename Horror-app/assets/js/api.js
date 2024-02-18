@@ -1,7 +1,9 @@
 'use strict'
 var api_key = '55ff10c1c71c95fef4cb770e49b9cd8f';
 var secureUrl = 'https://api.themoviedb.org/3/discover/movie';
-var detailUrl = 'https://api.themoviedb.org/3/movie/'
+var detailUrl = 'https://api.themoviedb.org/3/movie/';
+const imageURL = 'https://image.tmdb.org/t/p/';
+
 /**
  * fetch
  */
@@ -25,4 +27,4 @@ const fetchDatos = function(url,callback, parametros){
 }
 
 
-  export {secureUrl, detailUrl, api_key, fetchDatos};
+  export {secureUrl, detailUrl, api_key, imageBaseURL, fetchDatos};

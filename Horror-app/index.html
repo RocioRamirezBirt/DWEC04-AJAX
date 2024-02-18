@@ -18,9 +18,10 @@
    <link rel="stylesheet" href="assets/css/style.css">
 
    <!----------- SCRIPTS---------------->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="assets/js/main.js"></script>
+    
+    <script src="assets/js/main.js" defer></script>
     <script type="module" src="assets/js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -53,33 +54,23 @@
   </button>
 </header>
   
-  <main>
-        <!-------------------sidebar------------------------>
-        <nav class="sidebar" sidebar></nav>
-        <div class="overlay" overlay menu-toggler></div>
+<!-------------------MAIN------------------------>
+  <main  class="container">
+
+      <div class="card-badge">
+        <img class="img-cover movie-card"  src="assets/img/hereditary.jpg" alt="image">
+
+        <div class="meta-item">
+          <h3>Movie Title</h3>
+          <span class="green">9.8</span>
+        </div>
         
-        <article class="container" contenido>
+        <div class="resena">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio fugit cum ratione voluptatibus porro facilis hic enim, magni earum eveniet?</div>
+      </div>
 
-          <!-- Cuadrícula de pósters de películas de terror -->
-          
-
-
-          <section class="movie-list genre-list">
-            <div class="title-wrapper">
-                <h1 class="heading">Peliculas de Terror</h1>
-            </div>
-    
-            <div id="movie-grid" class="grid-list">
-        
-            </div>
-    
-            <button class="mas loading">Ver Mas</button>
-    
-        </section>
-
-        </article>
-
-
+  
+     
+       
   </main>
 </body>
 </html>
