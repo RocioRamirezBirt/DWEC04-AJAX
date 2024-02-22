@@ -1,0 +1,266 @@
+/*
+* === MAIN ===
+*/
+
+
+:root {
+
+    /*
+    * === COLORES ===
+    */
+    --bkg: hsla(200, 17%, 7%, 1);
+    --white: hsla(0, 0%, 100%,1);
+    --red: hsla(0, 100%, 46%, 1);
+    --crimson: hsla(0, 80%, 29%,1);
+    --sub-bkg:hsla(0, 0%, 12%,1);
+    --grey1: hsla(0, 0%, 63%,0.1);
+    --green: hsla(98, 32%, 45%, 1);
+    --orange: hsla(35, 100%, 55%, 1);
+
+
+
+    /*
+        * === GRADIANTES ===
+    */
+--banner-overlay: 90deg, hsl(220, 17%, 7%) 0%, hsla(220, 17%, 7%, 0.5) 100%;
+--bottom-overlay: 180deg, hsla(250, 13%, 11%, 0), hsla(250, 13%, 11%, 1);
+
+
+/*
+* === FUENTES Y TAMAÑOS ===
+*/
+
+--ff-subtitle: 'Barlow Condensed', sans-serif;
+--ff-txt: 'Open Sans', sans-serif;
+--ff-menu:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+--ff-title: "Creepster", system-ui;
+--fs-titulo-lg: 4rem;
+--fs-titulo: 3rem;
+--fs-body: 1.5rem;
+--fs-menu: 1.2rem;
+--fs-boton: 1.2rem;
+--fs-etiqueta:1.4rem;
+--weight-bold: 700;
+--weight:400;
+
+/*
+* === SOMBRAS ===
+*/
+
+--s1: 0 1px 4px hsla(0, 0%, 0%, 0.75);
+--s2: 0 2px 4px hsla(350, 100%, 43%, 0.3);
+
+/*
+* === BORDER RADIUS ===
+*/
+
+--r4: 4px;
+--r8: 8px;
+--r16: 16px;
+--r24: 24px;
+--r36: 36px;
+
+
+}
+
+
+    
+
+/*
+* === RESET ===
+*/
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li { list-style: none;}
+
+a,
+img,
+span,
+iframe,
+button { display: block;}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+img{ height: auto;}
+
+input,
+button {
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    text-align: left;
+    cursor: pointer;
+}
+
+html {
+    font-family: var(--ff-txt);
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bkg);
+    color: var(--txt-bkg);
+    font-size: var(--fs-body);
+    line-height: 1.5;
+}
+
+
+/*
+* === CODE REPEAT ===
+*/
+
+.title{
+    color: var(--red);
+    font-size: var(--fs-titulo-lg);
+    font-family: var(--ff-title);
+    letter-spacing: 1.3;
+    text-align: center;
+
+}
+
+.container-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+
+.movie-card{
+    position: relative;
+    width: 100%;
+    border-radius: var(--r4);
+}
+
+.movie-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.movie-info h3{
+    font-size: var(--fs-titulo);
+    font-family: var(--ff-subtitle);
+    letter-spacing: 1.5;
+    color: var(--crimson);
+}
+
+.movie-info span {
+    background-color: #a0a0a0;
+    color: var(--crimson);
+    display: flex;
+    align-items: center;
+    font-size: var(--fs-etiqueta);
+    font-weight: var(--weight-bold);
+    padding: 5px;
+    border-radius: var(--r4);
+    margin-block: 5px;
+}
+
+.info {
+    position: absolute;
+    text-align:justify;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white);
+    color: black;
+    padding: 1rem;
+    max-height: 100%;
+    transform: translateY(101%);
+    transition: 0.3s ease-in;
+}
+
+
+
+
+/*
+* === HEADER ===
+*/
+
+
+.container-header {
+    position: relative;
+    padding-block: 20px;
+    padding-inline: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-block: 10px;
+    align-items: center;
+    gap: 8px;
+}
+
+.input-field{
+    background-color: var(--crimson);
+    height: 40px;
+    line-height: 40px;
+    padding-inline: 40px 16px;
+    outline: none;
+    border-radius: var(--r8);
+    transition: 280ms ease;
+}
+
+.input-field::placeholder {
+    color: var(--white);
+}
+
+.input-field:hover{
+    box-shadow: 0 0 0 2px var(--sub-bkg); 
+}
+
+.input-field:focus{
+    box-shadow: 0 0 0 2px var(--sub-bkg);
+    padding-inline-start:  16px;
+}
+
+.subtitle {
+    color: var(--crimson);
+    font-size: var(--fs-titulo);
+    font-family: "Barlow Condensed", sans-serif;
+    text-align: end;
+    margin-block: 15px;
+    margin-right: 25px;
+}
+
+
+/*
+* === MAIN ===
+*/
+
+
+.card-badget {
+
+    width: 400px;
+    background-color: var(--grey1);
+    height:fit-content;
+    font-size: var(--fs-body);
+    color: var(--white);
+    padding: 10px;
+    border-radius: var(--r4);
+    gap: 8px;
+    margin-inline: 30px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.card-badget:hover .info{
+    transform: translateY(0);
+}
+
